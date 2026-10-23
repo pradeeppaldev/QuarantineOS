@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 180 25% 99.4%; /* #FDFEFE */
+    --foreground: 221 40% 20%; /* #1F2C49 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 221 40% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 221 40% 20%;
+
+    --primary: 187 82% 47%; /* #15C2D9 */
+    --primary-foreground: 220 43% 10%;
+
+    --secondary: 204 33% 95%; /* #EDF3F7 */
+    --secondary-foreground: 221 40% 20%;
+
+    --muted: 204 25% 94%;
+    --muted-foreground: 218 16% 45%;
+
+    --accent: 187 82% 94%;
+    --accent-foreground: 187 90% 25%;
+
+    --destructive: 0 75% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 206 24% 89%;
+    --input: 206 24% 89%;
+    --ring: 187 82% 47%;
+
+    --radius: 0.85rem;
+
+    /* Desktop Sidebar Tokens (Clean Navy) */
+    --sidebar-background: 221 40% 18%; /* #1A2640 */
+    --sidebar-foreground: 214 30% 92%;
+    --sidebar-border: 221 30% 24%;
+    --sidebar-accent: 221 34% 24%;
+    --sidebar-accent-foreground: 187 85% 65%;
+  }
+
+  .dark {
+    --background: 220 43% 8%; /* #0C121E */
+    --foreground: 210 25% 94%;
+
+    --card: 220 40% 12%; /* #121A2A */
+    --card-foreground: 210 25% 94%;
+
+    --popover: 220 40% 12%;
+    --popover-foreground: 210 25% 94%;
+
+    --primary: 187 82% 47%; /* #15C2D9 */
+    --primary-foreground: 220 43% 8%;
+
+    --secondary: 220 30% 16%;
+    --secondary-foreground: 210 25% 90%;
+
+    --muted: 220 30% 16%;
+    --muted-foreground: 215 18% 65%;
+
+    --accent: 220 35% 18%;
+    --accent-foreground: 187 82% 65%;
+
+    --destructive: 0 72% 52%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 28% 18%;
+    --input: 220 28% 18%;
+    --ring: 187 82% 47%;
+
+    /* Desktop Sidebar Tokens in Dark Theme */
+    --sidebar-background: 221 44% 10%; /* #0E1624 */
+    --sidebar-foreground: 214 25% 90%;
+    --sidebar-border: 221 30% 16%;
+    --sidebar-accent: 221 32% 16%;
+    --sidebar-accent-foreground: 187 85% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight text-navy dark:text-slate-100;
+  }
+}
+
+/* Custom scrollbars for clean healthcare UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
